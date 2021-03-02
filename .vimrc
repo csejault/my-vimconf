@@ -1,6 +1,18 @@
+"THANKS TO 
+"ThePrimeagen (youtube)
+"MAKC (youtube)
 
 "BEFORE USING THIS VIMRC
 "Make sure undodir is existing
+
+"SAVE A SESSION
+":mksession file.vim
+"USE A SESSION 
+"vim -S file.vim
+
+"OPEN TAB
+":tabedit
+
 syntax on
 
 "Norm
@@ -73,3 +85,4 @@ nnoremap <leader>r :source ~/.vimrc<CR>
 nnoremap <leader>; d$a;<esc>
 nnoremap <leader>a; ld$a;<esc>
 nnoremap <leader>i; hd$a;<esc>
+nnoremap <leader>vrc :tabedit \|:e ~/.vimrc<CR>
