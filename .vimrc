@@ -3,13 +3,14 @@
 "Make sure undodir is existing
 syntax on
 
+"Norm
 set tabstop=4
 set shiftwidth=4
 set smartindent
+set colorcolumn=80
 
-set nu
-set rnu
-
+set number
+set relativenumber
 
 "fat cursor
 set guicursor=
@@ -30,7 +31,6 @@ set undofile
 
 set scrolloff=8
 
-set colorcolumn=80
 
 "download Vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -39,30 +39,37 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.vim/plugged')
 "HERE YOU CAN PUT YOUR PLUGS
+call plug#begin('~/.vim/plugged')
 
+"STYLE
 Plug 'itchyny/lightline.vim'
+Plug 'morhetz/gruvbox'
 
+"FUZZY_FINDING
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'sharkdp/bat'
 Plug 'dandavison/delta'
 Plug 'ggreer/the_silver_searcher'
 Plug 'BurntSushi/ripgrep'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'morhetz/gruvbox'
+"GIT UTILS
 Plug 'tpope/vim-fugitive'
-
 
 call plug#end()
 
 "For light line plug. 
 set laststatus=2
 
+"gruvbox plug 
+colorscheme gruvbox
+set background=dark
+
+let mapleader = ' '
+nmap <leader>gs :Git status<CR>
 
 
-nmap <leader>gs :G<CR>
 
 
 
