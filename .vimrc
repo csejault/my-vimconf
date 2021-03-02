@@ -67,34 +67,9 @@ colorscheme gruvbox
 set background=dark
 
 let mapleader = ' '
-nmap <leader>gs :Git status<CR>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+nmap <leader>gs :G<CR>
+nnoremap <leader>pi :source ~/.vimrc \| :PlugInstall<CR>
+nnoremap <leader>r :source ~/.vimrc<CR>
+nnoremap <leader>; d$a;<esc>
+nnoremap <leader>a; ld$a;<esc>
+nnoremap <leader>i; hd$a;<esc>
