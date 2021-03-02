@@ -52,6 +52,8 @@ Plug 'BurntSushi/ripgrep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-fugitive'
+
 
 call plug#end()
 
@@ -60,6 +62,7 @@ set laststatus=2
 
 
 
+nmap <leader>gs :G<CR>
 
 
 
