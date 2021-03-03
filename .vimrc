@@ -31,7 +31,7 @@ set guicursor=
 set hidden
 
 "no jump when line is oversize
-set nowrap
+"set nowrap
 
 set nohlsearch
 set incsearch
@@ -85,14 +85,44 @@ set background=dark
 set sessionoptions+=tabpages,globals
 
 let mapleader = ' '
+"vim fugitive map
 nmap <leader>gs :G<CR>
+nmap <leader>gc :Git commit<CR>
+nmap <leader>gp :Git push<CR>
+nmap <leader>gl :Git log<CR>
+
+nnoremap <leader>K i<CR><esc>k$
+
+"Tab move map
+nnoremap <leader><TAB> gt
+nnoremap <leader>` gT
+
+
 nnoremap <leader>pi :source ~/.vimrc \| :PlugInstall<CR>
 nnoremap <leader>r :source ~/.vimrc<CR>
-nnoremap <leader>; d$a;<esc>
+nnoremap <leader>; A;<esc>
+nnoremap <leader>d; d$a;<esc>
 nnoremap <leader>a; ld$a;<esc>
 nnoremap <leader>i; hd$a;<esc>
 nnoremap <leader>vrc :tabedit \|:e ~/.vimrc<CR>
 nnoremap <leader>te :tabedit <CR>
-nnoremap <leader>h gT
-nnoremap <leader>l gt
+nnoremap <leader>h <C-w>h
+nnoremap <leader>l <C-w>l
+nnoremap <leader>k <C-w>k
+nnoremap <leader>j <C-w>j
 
+nnoremap <Left> :echo "No left for you!"<CR>
+vnoremap <Left> :echo "No left for you!"<CR>
+inoremap <Left> <nop>
+
+nnoremap <Right> :echo "No right for you!"<CR>
+vnoremap <Right> :echo "No right for you!"<CR>
+inoremap <Right>  <nop>
+
+nnoremap <up> :echo "No up for you!"<CR>
+vnoremap <up> :echo "No up for you!"<CR>
+inoremap <up> <nop>
+
+nnoremap <down> :echo "No down for you!"<CR>
+vnoremap <down> :echo "No down for you!"<CR>
+inoremap <down> <nop>
