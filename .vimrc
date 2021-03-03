@@ -66,6 +66,9 @@ Plug 'dandavison/delta'
 Plug 'ggreer/the_silver_searcher'
 Plug 'BurntSushi/ripgrep'
 
+"renambe tabs
+Plug 'gcmt/taboo.vim'
+
 "GIT UTILS
 Plug 'tpope/vim-fugitive'
 
@@ -78,6 +81,9 @@ set laststatus=2
 colorscheme gruvbox
 set background=dark
 
+"Save Tabs Name
+set sessionoptions+=tabpages,globals
+
 let mapleader = ' '
 nmap <leader>gs :G<CR>
 nnoremap <leader>pi :source ~/.vimrc \| :PlugInstall<CR>
@@ -86,3 +92,7 @@ nnoremap <leader>; d$a;<esc>
 nnoremap <leader>a; ld$a;<esc>
 nnoremap <leader>i; hd$a;<esc>
 nnoremap <leader>vrc :tabedit \|:e ~/.vimrc<CR>
+nnoremap <leader>te :tabedit <CR>
+nnoremap <leader>h gT
+nnoremap <leader>l gt
+
