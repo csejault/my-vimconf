@@ -15,6 +15,9 @@
 
 syntax on
 
+set exrc
+set secure
+
 "Norm
 set tabstop=4
 set shiftwidth=4
@@ -85,6 +88,10 @@ set background=dark
 set sessionoptions+=tabpages,globals
 
 let mapleader = ' '
+
+nnoremap <leader>mr :make re<CR>
+
+nnoremap <leader>a @
 "vim fugitive map
 nmap <leader>gs :G<CR>
 nmap <leader>gc :Git commit<CR>
@@ -101,9 +108,11 @@ nnoremap <leader>` gT
 nnoremap <leader>pi :source ~/.vimrc \| :PlugInstall<CR>
 nnoremap <leader>r :source ~/.vimrc<CR>
 nnoremap <leader>; A;<esc>
+
 nnoremap <leader>d; d$a;<esc>
 nnoremap <leader>a; ld$a;<esc>
 nnoremap <leader>i; hd$a;<esc>
+
 nnoremap <leader>vrc :tabedit \|:e ~/.vimrc<CR>
 nnoremap <leader>te :tabedit <CR>
 nnoremap <leader>h <C-w>h
