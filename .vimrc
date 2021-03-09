@@ -89,49 +89,63 @@ set sessionoptions+=tabpages,globals
 
 let mapleader = ' '
 
+"Makefile
 nnoremap <leader>mr :make re<CR>
 
+"Fast macro call
 nnoremap <leader>a @
+
 "vim fugitive map
 nmap <leader>gs :G<CR>
 nmap <leader>gc :Git commit<CR>
 nmap <leader>gp :Git push<CR>
 nmap <leader>gl :Git log<CR>
 
-nnoremap <leader>K i<CR><esc>k$
-
+"Open a new tab
+nnoremap <leader>te :tabedit <CR>
 "Tab move map
 nnoremap <leader><TAB> gt
 nnoremap <leader>` gT
 
 
-nnoremap <leader>pi :source ~/.vimrc \| :PlugInstall<CR>
+"Edit vimrc
+nnoremap <leader>vrc :tabedit \|:e ~/.vimrc<CR>
+"reload vimrc
 nnoremap <leader>r :source ~/.vimrc<CR>
-nnoremap <leader>; A;<esc>
+"reload vimrc and install plug
+nnoremap <leader>pi :source ~/.vimrc \| :PlugInstall<CR>
 
+"Del line and add ;
 nnoremap <leader>d; d$a;<esc>
 nnoremap <leader>a; ld$a;<esc>
 nnoremap <leader>i; hd$a;<esc>
 
-nnoremap <leader>vrc :tabedit \|:e ~/.vimrc<CR>
-nnoremap <leader>te :tabedit <CR>
+"add ; at the end of line 
+nnoremap <leader>; A;<esc>
+
+"add new line
+nnoremap <leader>O O<esc>j
+nnoremap <leader>o o<esc>k
+
+"Krack a line
+nnoremap <leader>K i<CR><esc>k$
+
+"move in different buffer (split / vertical split)
 nnoremap <leader>h <C-w>h
 nnoremap <leader>l <C-w>l
 nnoremap <leader>k <C-w>k
 nnoremap <leader>j <C-w>j
 
+"disable arrow
 nnoremap <Left> :echo "No left for you!"<CR>
 vnoremap <Left> :echo "No left for you!"<CR>
 inoremap <Left> <nop>
-
 nnoremap <Right> :echo "No right for you!"<CR>
 vnoremap <Right> :echo "No right for you!"<CR>
 inoremap <Right>  <nop>
-
 nnoremap <up> :echo "No up for you!"<CR>
 vnoremap <up> :echo "No up for you!"<CR>
 inoremap <up> <nop>
-
 nnoremap <down> :echo "No down for you!"<CR>
 vnoremap <down> :echo "No down for you!"<CR>
 inoremap <down> <nop>
