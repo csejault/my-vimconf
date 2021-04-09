@@ -1,3 +1,15 @@
+" **************************************************************************** "
+"                                                                              "
+"                                                         :::      ::::::::    "
+"    .vimrc                                             :+:      :+:    :+:    "
+"                                                     +:+ +:+         +:+      "
+"    By: csejault <csejault@student.42.fr>          +#+  +:+       +#+         "
+"                                                 +#+#+#+#+#+   +#+            "
+"    Created: 2021/04/09 15:30:35 by csejault          #+#    #+#              "
+"    Updated: 2021/04/09 16:58:26 by csejault         ###   ########.fr        "
+"                                                                              "
+" **************************************************************************** "
+
 "THANKS TO 
 "ThePrimeagen (youtube)
 "MAKC (youtube)
@@ -89,6 +101,20 @@ set sessionoptions+=tabpages,globals
 
 let mapleader = ' '
 
+"Header
+nnoremap	<leader>H gg:Stdheader<CR>
+
+"FOLDER
+"https://vim.fandom.com/wiki/Folding
+"https://vim.fandom.com/wiki/Folding_with_Regular_Expression
+set foldmethod=marker
+set foldmarker={,}
+"set folder for shell
+"knnoremap	<leader>sfs yypkI#{{{<esc>}}I#}}}<CR><esc>zm
+"open/close folder
+nnoremap	<leader>f zr
+nnoremap	<leader>F zm
+
 "Makefile
 nnoremap <leader>mr :make re<CR>
 
@@ -102,14 +128,17 @@ nmap <leader>gp :Git push<CR>
 nmap <leader>gl :Git log<CR>
 
 "Open a new tab
-nnoremap <leader>te :tabedit <CR>
+nnoremap <leader>te :tabedit
 "Tab move map
 nnoremap <leader><TAB> gt
 nnoremap <leader>` gT
 
+"splits
+nnoremap <leader>s :sp
+nnoremap <leader>v :sp
 
 "Edit vimrc
-nnoremap <leader>vrc :tabedit \|:e ~/.vimrc<CR>
+nnoremap <leader>rc :tabedit \|:e ~/.vimrc<CR>
 "reload vimrc
 nnoremap <leader>r :source ~/.vimrc<CR>
 "reload vimrc and install plug
