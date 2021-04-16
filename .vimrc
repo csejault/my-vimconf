@@ -6,7 +6,7 @@
 "    By: csejault <csejault@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2021/04/09 15:30:35 by csejault          #+#    #+#              "
-"    Updated: 2021/04/09 16:58:26 by csejault         ###   ########.fr        "
+"    Updated: 2021/04/16 16:24:22 by csejault         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -80,12 +80,16 @@ Plug 'sharkdp/bat'
 Plug 'dandavison/delta'
 Plug 'ggreer/the_silver_searcher'
 Plug 'BurntSushi/ripgrep'
+Plug 'vim-syntastic/syntastic'
+Plug 'kien/rainbow_parentheses.vim'
 
 "renambe tabs
 Plug 'gcmt/taboo.vim'
 
 "GIT UTILS
 Plug 'tpope/vim-fugitive'
+
+Plug 'chase/vim-ansible-yaml'
 
 call plug#end()
 
@@ -134,8 +138,8 @@ nnoremap <leader><TAB> gt
 nnoremap <leader>` gT
 
 "splits
-nnoremap <leader>s :sp
-nnoremap <leader>v :sp
+nnoremap <leader>s :sp<space>
+nnoremap <leader>v :vsp<space>
 
 "Edit vimrc
 nnoremap <leader>rc :tabedit \|:e ~/.vimrc<CR>
@@ -143,6 +147,16 @@ nnoremap <leader>rc :tabedit \|:e ~/.vimrc<CR>
 nnoremap <leader>r :source ~/.vimrc<CR>
 "reload vimrc and install plug
 nnoremap <leader>pi :source ~/.vimrc \| :PlugInstall<CR>
+
+"del everything betwen quote the insert mode
+nnoremap ' ci'
+nnoremap " ci"
+nnoremap ] ci]
+nnoremap [ ci[
+nnoremap } ci}
+nnoremap { ci{
+nnoremap ( ci(
+nnoremap ) ci)
 
 "Del line and add ;
 nnoremap <leader>d; d$a;<esc>
@@ -164,6 +178,12 @@ nnoremap <leader>h <C-w>h
 nnoremap <leader>l <C-w>l
 nnoremap <leader>k <C-w>k
 nnoremap <leader>j <C-w>j
+
+"move buffer
+nnoremap <leader>H <C-w>H
+nnoremap <leader>L <C-w>L
+nnoremap <leader>K <C-w>K
+nnoremap <leader>J <C-w>J
 
 "disable arrow
 nnoremap <Left> :echo "No left for you!"<CR>
