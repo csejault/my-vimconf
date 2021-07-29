@@ -6,7 +6,7 @@
 "    By: csejault <csejault@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2021/04/09 15:30:35 by csejault          #+#    #+#              "
-"    Updated: 2021/04/16 16:24:22 by csejault         ###   ########.fr        "
+"    Updated: 2021/07/20 02:12:45 by csejault         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -44,6 +44,8 @@ set guicursor=
 
 "keep your buffer when tour close a file
 set hidden
+
+set wildmenu
 
 "no jump when line is oversize
 "set nowrap
@@ -137,9 +139,6 @@ nnoremap <leader>te :tabedit
 nnoremap <leader><TAB> gt
 nnoremap <leader>` gT
 
-"splits
-nnoremap <leader>s :sp<space>
-nnoremap <leader>v :vsp<space>
 
 "Edit vimrc
 nnoremap <leader>rc :tabedit \|:e ~/.vimrc<CR>
@@ -173,6 +172,13 @@ nnoremap <leader>o o<esc>k
 "Krack a line
 nnoremap <leader>K i<CR><esc>k$
 
+"splits
+nnoremap <leader>s :sp<space>
+nnoremap <leader>v :vsp<space>
+
+"big resize window
+nnoremap <leader>_ <C-w>_
+nnoremap <leader>= <C-w>=
 "move in different buffer (split / vertical split)
 nnoremap <leader>h <C-w>h
 nnoremap <leader>l <C-w>l

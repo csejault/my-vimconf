@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+export PS1="%~$ "
+export MAIL="csejault@student.42.fr" 
+alias gccf="gcc -Wall -Werror -Wextra"
+alias ll="ls -l"
+alias la="ls -la"
+alias lr="ls -la *"
+alias sgoinfre="cd /sgoinfre/goinfre/Perso/csejault/"
+alias philosophers="cd /sgoinfre/goinfre/Perso/csejault/philosophers"
+alias philosophersvi="cd /sgoinfre/goinfre/Perso/csejault/philosophers; vim -S philosophers.vim"
+alias goinfre="cd /goinfre/csejault/"
+alias dbt="docker build -t"
+alias db="docker build"
+alias drit="docker run -it"
+alias dritrm="docker run -it --rm"
+alias drmysql="docker run -it --rm -p 3306:3306 mysql"
+alias drnginx="docker run -it --rm -p 80:80 -p 443:443 nginx"
+alias drwordpress="docker run -it --rm -p 5050:5050 wordpress"
+alias drphpmyadmin="docker run -it --rm -p 5000:5000 phpmyadmin"
+export SHELL=/bin/bash
+export PATH=$HOME/.brew/bin:$PATH
