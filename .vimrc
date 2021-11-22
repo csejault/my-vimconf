@@ -6,7 +6,7 @@
 "    By: csejault <csejault@student.42.fr>          +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2021/04/09 15:30:35 by csejault          #+#    #+#              "
-"    Updated: 2021/07/20 02:12:45 by csejault         ###   ########.fr        "
+"    Updated: 2021/11/22 12:27:15 by csejault         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -147,6 +147,7 @@ nnoremap <leader>r :source ~/.vimrc<CR>
 "reload vimrc and install plug
 nnoremap <leader>pi :source ~/.vimrc \| :PlugInstall<CR>
 
+nnoremap <leader>ct i std::cout <<  << std::endl;<esc>\|f<lla
 "del everything betwen quote the insert mode
 nnoremap ' ci'
 nnoremap " ci"
