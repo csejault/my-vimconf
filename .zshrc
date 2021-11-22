@@ -19,3 +19,4 @@ alias drwordpress="docker run -it --rm -p 5050:5050 wordpress"
 alias drphpmyadmin="docker run -it --rm -p 5000:5000 phpmyadmin"
 export SHELL=/bin/bash
 export PATH=$HOME/.brew/bin:$PATH
+export EDITOR=vim
