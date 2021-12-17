@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 export MAIL="csejault@student.42.fr" 
-export PS1="$PWD$ "
+export PROMPT='%F{#ff00ff}%/%f %F{#5fd7ff}%# '
 export PATH=$HOME/.brew/bin:$PATH
 export EDITOR=vim
 export SGOINFRE="/sgoinfre/goinfre/Perso/csejault"
